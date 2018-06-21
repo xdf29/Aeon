@@ -99,12 +99,12 @@ namespace cryptonote {
       // base_reward = FINAL_SUBSIDY_PER_MINUTE*target_minutes;
     // }
 	if(base_reward < TEST_BASE_REWARD){
-		base_reward = TEST_BASE_REWARD*COIN;
+		base_reward = TEST_BASE_REWARD;
 	}
 	
 	
 	if(base_reward + already_generated_coins >= MONEY_SUPPLY){
-		base_reward = MONEY_SUPPLY - already_generated_coins;
+		base_reward = MONEY_SUPPLY - already_generated_coins*COIN;
 	}
 
     uint64_t full_reward_zone = get_min_block_size(version);
