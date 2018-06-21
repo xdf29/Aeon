@@ -91,13 +91,13 @@ static const struct {
   difficulty_type diff_reset_value;
 } mainnet_hard_forks[] = {
   // version 1 from the start of the blockchain
-  { 1, 1, 0, 1341378000, 0 },
+  { 1, 0, 0, 1341378000, 0 },
 
   // versions 2, 3, 4, 5 and 6 are skipped, in favor of reducing the cost of adopting the POW change and other consensus updates from Monero
   // version 7 starts from block 963500, which is on or around the 3rd of June, 2018. Fork time finalised on 2018-05-24.
-  { 7, 963500, 0, 1527137212, 2000000000 },
+  { 7, 1, 0, 1527137212, 0 },
 };
-static const uint64_t mainnet_hard_fork_version_1_till = 963499;
+static const uint64_t mainnet_hard_fork_version_1_till = 0;
 
 static const struct {
   uint8_t version;
@@ -1020,7 +1020,7 @@ difficulty_type Blockchain::get_next_difficulty_for_alternative_chain(const std:
   }
 
   // FIXME: This will fail if fork activation heights are subject to voting
-  size_t target = get_ideal_hard_fork_version(bei.height) < 2 && bei.height < HARDFORK_1_HEIGHT ? DIFFICULTY_TARGET_V1 : DIFFICULTY_TARGET_V2;
+  size_t target = get_ideal_hard_fork_version(bei.height) < 2 ? DIFFICULTY_TARGET_V1 : DIFFICULTY_TARGET_V2;
   uint64_t last_diff_reset_height = m_hardfork->get_last_diff_reset_height(bei.height);
   difficulty_type last_diff_reset_value = m_hardfork->get_last_diff_reset_value(bei.height);
 
@@ -4397,7 +4397,7 @@ bool Blockchain::get_hard_fork_voting_info(uint8_t version, uint32_t &window, ui
 
 uint64_t Blockchain::get_difficulty_target() const
 {
-  return get_current_hard_fork_version() < 2 && get_current_blockchain_height() < HARDFORK_1_HEIGHT ? DIFFICULTY_TARGET_V1 : DIFFICULTY_TARGET_V2;
+  return get_current_hard_fork_version() < 2 ? DIFFICULTY_TARGET_V1 : DIFFICULTY_TARGET_V2;
 }
 
 std::map<uint64_t, std::tuple<uint64_t, uint64_t, uint64_t>> Blockchain:: get_output_histogram(const std::vector<uint64_t> &amounts, bool unlocked, uint64_t recent_cutoff, uint64_t min_count) const

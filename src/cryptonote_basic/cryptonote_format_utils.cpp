@@ -940,7 +940,8 @@ namespace cryptonote
   {
     blobdata bd = get_block_hashing_blob(b);
     const int cn_variant = b.major_version >= 7 ? b.major_version - 6 : 0;
-    crypto::cn_slow_hash(bd.data(), bd.size(), res, height >= HARDFORK_1_HEIGHT || b.major_version >= 2, cn_variant);
+    // crypto::cn_slow_hash(bd.data(), bd.size(), res, height >= HARDFORK_1_HEIGHT || b.major_version >= 2, cn_variant);
+    crypto::cn_slow_hash(bd.data(), bd.size(), res, cn_variant);
     return true;
   }
   //---------------------------------------------------------------

@@ -174,9 +174,10 @@ namespace cryptonote {
     }
 
     difficulty_type new_diff = (low + time_span - 1) / time_span;
-    if (height >= HARDFORK_1_HEIGHT && height < HARDFORK_1_HEIGHT+HARDFORK_1_DIFFADJ_WINDOW) {
-      new_diff += new_diff*(HARDFORK_1_HEIGHT+HARDFORK_1_DIFFADJ_WINDOW-height)*(HARDFORK_1_DIFFADJ-1)/HARDFORK_1_DIFFADJ_WINDOW;
-    }
+    // if (height >= HARDFORK_1_HEIGHT && height < HARDFORK_1_HEIGHT+HARDFORK_1_DIFFADJ_WINDOW) {
+      // new_diff += new_diff*(HARDFORK_1_HEIGHT+HARDFORK_1_DIFFADJ_WINDOW-height)*(HARDFORK_1_DIFFADJ-1)/HARDFORK_1_DIFFADJ_WINDOW;
+    // }
+	new_diff += new_diff*(0+360-height)*(2-1)/360;
     return new_diff;
   }
 
