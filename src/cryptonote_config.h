@@ -57,7 +57,7 @@
 // MONEY_SUPPLY - total number coins to be generated
 #define MONEY_SUPPLY                                    ((uint64_t)(-8446744073709551616))
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (3)
-#define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
+// #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    20000 //size of block (bytes) after which reward for block calculated using block size - before first fork
@@ -147,6 +147,8 @@
 #define NOFAKE_TXS_TO_TOTAL_TXS_PERCENT         10
 
 // New constants are intended to go here
+#define TEST_BASE_REWARD         				((uint64_t)100000000000000000)
+
 namespace config
 {
   uint64_t const DEFAULT_FEE_ATOMIC_XMR_PER_KB = 500; // Just a placeholder!  Change me!
