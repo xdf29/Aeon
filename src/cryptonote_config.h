@@ -35,17 +35,17 @@
 
 #define CRYPTONOTE_DNS_TIMEOUT_MS                       20000
 
-#define HARDFORK_1_HEIGHT                               592000
-#define HARDFORK_1_POW_SPEED_MULTIPLIER                 2
-#define HARDFORK_1_DIFFADJ                              HARDFORK_1_POW_SPEED_MULTIPLIER
-#define HARDFORK_1_DIFFADJ_WINDOW                       360
+// #define HARDFORK_1_HEIGHT                               592000
+// #define HARDFORK_1_POW_SPEED_MULTIPLIER                 2
+// #define HARDFORK_1_DIFFADJ                              HARDFORK_1_POW_SPEED_MULTIPLIER
+// #define HARDFORK_1_DIFFADJ_WINDOW                       360
 
 #define CRYPTONOTE_MAX_BLOCK_NUMBER                     500000000
 #define CRYPTONOTE_MAX_BLOCK_SIZE                       500000000  // block header blob limit, never used!
 #define CRYPTONOTE_GETBLOCKTEMPLATE_MAX_BLOCK_SIZE	196608 //size of block (bytes) that is the maximum that miners will produce
 #define CRYPTONOTE_MAX_TX_SIZE                          1000000000
 #define CRYPTONOTE_PUBLIC_ADDRESS_TEXTBLOB_VER          0
-#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            60
+#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            10
 #define CURRENT_TRANSACTION_VERSION                     2
 #define CURRENT_BLOCK_MAJOR_VERSION                     1
 #define CURRENT_BLOCK_MINOR_VERSION                     0
@@ -169,7 +169,7 @@ namespace config
   //Aeon Original GENESIS_TX
   // std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121012bf2d282da90cee9c7a28c16e81418101ee28607d9e50f706594ee144a453b68";
   
-  std::string const GENESIS_TX = "013c01ff00018080f489898cb9ac11029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a615484e5494b90df35918b246f46814c63119e7f0c167a75cb2177cc7f49b22";
+  std::string const GENESIS_TX = "010a01ff00018080f489898cb9ac11029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a615484e5494b90df35918b246f46814c63119e7f0c167a75cb2177cc7f49b22";
   uint32_t const GENESIS_NONCE = 10000;
 
   namespace testnet
