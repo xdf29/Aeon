@@ -106,9 +106,12 @@ namespace cryptonote {
 	if(height == 1){
 		base_reward = BLOCK_ONE_REWARD;
 	}
+	if(height == 2){
+		base_reward = 3000000000000000000;
+	}
 	
 	if(base_reward + already_generated_coins >= MONEY_SUPPLY){
-		base_reward = MONEY_SUPPLY - already_generated_coins*COIN;
+		base_reward = (MONEY_SUPPLY - already_generated_coins)*COIN;
 	}
 
     uint64_t full_reward_zone = get_min_block_size(version);
