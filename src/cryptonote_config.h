@@ -147,7 +147,7 @@
 #define NOFAKE_TXS_TO_TOTAL_TXS_PERCENT         10
 
 // New constants are intended to go here
-#define TEST_BASE_REWARD         			((uint64_t)(100000000000000000))
+#define TEST_BASE_REWARD         			((uint64_t)(300000000000000000))
 #define BLOCK_ONE_REWARD					((uint64_t)(5000000000000000000))
 
 namespace config

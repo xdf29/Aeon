@@ -110,8 +110,13 @@ namespace cryptonote {
 		base_reward = 3000000000000000000;
 	}
 	
+	std::cout << base_reward << std::endl;
+	std::cout << already_generated_coins << std::endl;
+	std::cout << MONEY_SUPPLY << std::endl;
+	
 	if(base_reward + already_generated_coins >= MONEY_SUPPLY){
 		base_reward = (MONEY_SUPPLY - already_generated_coins)*COIN;
+		std::cout << "ACCESS: " <<base_reward << std::endl;
 	}
 
     uint64_t full_reward_zone = get_min_block_size(version);
