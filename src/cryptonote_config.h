@@ -56,7 +56,7 @@
 
 // MONEY_SUPPLY - total number coins to be generated
 #define MONEY_SUPPLY                                    ((uint64_t)(-8446744073709551616))
-#define EMISSION_SPEED_FACTOR_PER_MINUTE                (3)
+#define EMISSION_SPEED_FACTOR_PER_MINUTE                (25)
 // #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
@@ -75,9 +75,9 @@
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 
-#define DIFFICULTY_TARGET_V2                            60  // seconds
-#define DIFFICULTY_TARGET_V1                            60  // seconds - before first fork
-#define DIFFICULTY_WINDOW                               720 // blocks
+#define DIFFICULTY_TARGET_V2                            30  // seconds 60
+#define DIFFICULTY_TARGET_V1                            30  // seconds - before first fork 60
+#define DIFFICULTY_WINDOW                               720 // blocks 
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
 #define DIFFICULTY_BLOCKS_COUNT                         (DIFFICULTY_WINDOW + DIFFICULTY_LAG)
@@ -148,6 +148,7 @@
 
 // New constants are intended to go here
 #define TEST_BASE_REWARD         				((uint64_t)100000000000000000)
+#define FIRST_BLOCK_REWARD						((uint64_t)5000000000000000000)
 
 namespace config
 {
@@ -169,7 +170,11 @@ namespace config
   //Aeon Original GENESIS_TX
   // std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121012bf2d282da90cee9c7a28c16e81418101ee28607d9e50f706594ee144a453b68";
   
-  std::string const GENESIS_TX = "013c01ff00018080f489898cb9ac11029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a615484e5494b90df35918b246f46814c63119e7f0c167a75cb2177cc7f49b22";
+  // std::string const GENESIS_TX = "013c01ff00018080f489898cb9ac11029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a615484e5494b90df35918b246f46814c63119e7f0c167a75cb2177cc7f49b22";
+  
+  //Emission = 25
+  std::string const GENESIS_TX = "013c01ff0001c484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121019ee8787c82a4dd809dc6699e822bd4dfc6436947f7b716fb147931e4495056ef";
+  
   uint32_t const GENESIS_NONCE = 10000;
 
   namespace testnet
