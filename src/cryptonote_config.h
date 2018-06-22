@@ -148,7 +148,7 @@
 
 // New constants are intended to go here
 #define TEST_BASE_REWARD         				((uint64_t)100000000000000000)
-// #define FIRST_BLOCK_REWARD						((uint64_t)5000000000000000000)
+#define FIRST_BLOCK_REWARD						MONEY_SUPPLY / 2
 
 namespace config
 {
@@ -174,6 +174,7 @@ namespace config
   
   //Emission = 25
   std::string const GENESIS_TX = "013c01ff0001c484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210141ffd95068319bbd2b01b5157d8ed5e92296935a9c7dcdaebb042d4beaf385a0";
+  
   
   uint32_t const GENESIS_NONCE = 10000;
 
