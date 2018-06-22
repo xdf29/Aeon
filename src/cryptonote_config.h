@@ -75,8 +75,8 @@
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 
-#define DIFFICULTY_TARGET_V2                            30  // seconds 60
-#define DIFFICULTY_TARGET_V1                            30  // seconds - before first fork 60
+#define DIFFICULTY_TARGET_V2                            60  // seconds 
+#define DIFFICULTY_TARGET_V1                            60  // seconds - before first fork 
 #define DIFFICULTY_WINDOW                               720 // blocks 
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
@@ -173,7 +173,7 @@ namespace config
   // std::string const GENESIS_TX = "013c01ff00018080f489898cb9ac11029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a615484e5494b90df35918b246f46814c63119e7f0c167a75cb2177cc7f49b22";
   
   //Emission = 25
-  std::string const GENESIS_TX = "013c01ff0001c484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121019ee8787c82a4dd809dc6699e822bd4dfc6436947f7b716fb147931e4495056ef";
+  std::string const GENESIS_TX = "013c01ff0001c484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017412b673149809baa1aa55be19efcf71f0c349ef2afd6c5d92de870a586f9150";
   
   uint32_t const GENESIS_NONCE = 10000;
 
