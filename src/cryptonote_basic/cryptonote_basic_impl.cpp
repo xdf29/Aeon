@@ -102,9 +102,9 @@ namespace cryptonote {
 	// if(base_reward < TEST_BASE_REWARD){
 		// base_reward = TEST_BASE_REWARD;
 	// }
-	
+	std::cout<< FIRST_BLOCK_REWARD <<std::endl;
 	if(height == 1){
-		base_reward = FIRST_BLOCK_REWARD;
+		base_reward = BLOCK_ONE_REWARD;
 	}
 	
 	if(base_reward + already_generated_coins >= MONEY_SUPPLY){
