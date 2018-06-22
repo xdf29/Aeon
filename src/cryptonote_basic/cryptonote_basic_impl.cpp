@@ -100,8 +100,9 @@ namespace cryptonote {
     // }
 	
 	if(height == 0){
-		base_reward = 0;
+		base_reward = ((uint64_t)100000000000);
 	}	
+	
 	// if(base_reward < TEST_BASE_REWARD){
 		// base_reward = TEST_BASE_REWARD;
 	// }
