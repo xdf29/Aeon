@@ -103,9 +103,9 @@ namespace cryptonote {
 		base_reward = TEST_BASE_REWARD;
 	}
 	
-	if(height == 1){
-		base_reward = FIRST_BLOCK_REWARD;
-	}
+	// if(height == 1){
+		// base_reward = FIRST_BLOCK_REWARD;
+	// }
 	
 	if(base_reward + already_generated_coins >= MONEY_SUPPLY){
 		base_reward = MONEY_SUPPLY - already_generated_coins*COIN;
