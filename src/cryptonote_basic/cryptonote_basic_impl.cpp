@@ -99,9 +99,9 @@ namespace cryptonote {
       // base_reward = FINAL_SUBSIDY_PER_MINUTE*target_minutes;
     // }
 	
-	// if(base_reward < TEST_BASE_REWARD){
-		// base_reward = TEST_BASE_REWARD;
-	// }
+	if(base_reward < TEST_BASE_REWARD){
+		base_reward = TEST_BASE_REWARD;
+	}
 
 	if(height == 1){
 		base_reward = BLOCK_ONE_REWARD;
